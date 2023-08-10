@@ -14,9 +14,9 @@ export default function Page() {
           <div className="mt-20">
             <SignIn />
           </div>
-               <Footer />
+          
         </div>
-   
+        <Footer />
       </section>
     </main>
   );
