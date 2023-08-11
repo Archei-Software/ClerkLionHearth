@@ -1,10 +1,10 @@
 import { UserButton } from "@clerk/nextjs";
+import Header from "@/components/shared/header/Header";
 
 export default function Home() {
   return (
-    <div>
-      <h1>home</h1>
-      <UserButton afterSignOutUrl="/"/>
+    <div className="bg-zinc-500">
+      <Header />
     </div>
   )
 }

@@ -11,7 +11,7 @@ export default function Page() {
       <section className={`bg-contain bg-center bg-no-repeat bg-opacity-75`} style={{ backgroundImage: `url('${wallpaper}')` }}>
         <div className="w-screen h-screen flex flex-col items-center justify-center">
           <Notifications />
-          <div className="mt-20">
+          <div className="mb-20">
             <SignIn />
           </div>
           

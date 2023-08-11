@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi'; // Import the icon
 
 export default function Notifications() {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
@@ -13,7 +13,7 @@ export default function Notifications() {
         <div className="absolute top-0 left-0 inline-block">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="relative z-10 block p-2 text-gray-700 bg-transparent border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none hover:text-[#750FC5]"
+                className="relative z-10 block p-2 text-white bg-transparent border border-transparent rounded-md dark:text-white focus:border-blue-500 focus:ring-opacity-40 dark:focus:ring-opacity-40 focus:ring-blue-300 dark:focus:ring-blue-400 focus:ring dark:bg-gray-800 focus:outline-none hover:text-[#750FC5]"
             >
            <GiHamburgerMenu size={40} />
 
