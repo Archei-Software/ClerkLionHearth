@@ -1,9 +1,9 @@
 import { UserButton } from "@clerk/nextjs";
+import Menubar from '../../../components/shared/menubar/Menubar'
 async function Page() {
     return(
         <main>
-            <h1 className="head-text">Onboarding</h1>
-            <UserButton afterSignOutUrl="/"/>
+         <Menubar />
         </main>
     ) 
 }

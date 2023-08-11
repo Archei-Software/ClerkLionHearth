@@ -14,7 +14,6 @@ export default function Page() {
           <div className="mb-20">
           <SignUp />
           </div>
-          
         </div>
         <Footer />
       </section>
