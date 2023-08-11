@@ -1,6 +1,16 @@
 'use client'
 
 import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
+  
+
+import {
     Dot
   } from "lucide-react";
 
@@ -9,7 +19,7 @@ import Image from 'next/image';
 
 import { useEffect, useState } from 'react';
 import { BiSolidCartDownload } from 'react-icons/bi';
-import { FaDiceD20, FaUserFriends } from 'react-icons/fa';
+import { FaDiceD20, FaUserFriends, FaShoppingCart } from 'react-icons/fa';
 import { IoNotifications, IoSettings } from 'react-icons/io5'
 import { MdPersonSearch } from 'react-icons/md'
 import { HiUserAdd } from 'react-icons/hi'
@@ -70,14 +80,15 @@ export default function Menubar() {
                         </span>
 
                         <a href="store" onClick={() => handleIconClick('icon3')} className={`p-1.5 hover:text-white focus:outline-none transition-colors duration-200 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 ${selectedIcon === 'icon3' ? 'text-white' : 'text-gray-500'} ${isActive("/pt-br/store")}`}>
-                            <BiSolidCartDownload className='text-heading1-bold'></BiSolidCartDownload>
+                            <FaShoppingCart className='text-heading1-bold'></FaShoppingCart>
                         </a>
 
                         <span onClick={() => handleIconClick('icon4')} className={`p-1.5 cursor-pointer hover:text-white focus:outline-none transition-colors duration-200 rounded-lg dark:text-gray-400 dark:hover:bg-gray-800 ${selectedIcon === 'icon4' ? 'text-white' : 'text-gray-500'}`}>
                             <IoNotifications className='text-heading1-bold'></IoNotifications>
                         </span>
 
-                        <div className="relative top-[25rem] ">
+                        <div className="z-10 relative top-[25rem] ">
+                            
                             <UserButton appearance={
                                 {
                                     elements: {
@@ -87,8 +98,9 @@ export default function Menubar() {
                                 }
                             }
                             afterSignOutUrl="/" />
+                            
                         </div>
-             
+                        <Dot className="relative text-green-500 cursor-pointer" />
                     </nav>
                     
                 </aside>
@@ -97,4 +109,3 @@ export default function Menubar() {
         </>
     )
 }
-
