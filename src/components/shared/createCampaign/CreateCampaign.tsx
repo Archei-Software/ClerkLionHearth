@@ -92,13 +92,13 @@ export default function CreateCampaign() {
                                             <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent className="w-[200px] p-0 bg-white">
+                                    <PopoverContent className="w-[200px] p-0 bg-[#1D1D1D] mt-[-2.75rem] ml-[31rem]">
                                         <Command>
-                                            <CommandInput placeholder="Pesquise o sistema" />
-                                            <CommandEmpty>Não existe este sistema.</CommandEmpty>
+                                            <CommandInput className="text-white" placeholder="Pesquise o sistema" />
+                                            <CommandEmpty className="text-white">Não existe este sistema.</CommandEmpty>
                                             <CommandGroup>
                                                 {sistemas.map((sistemas) => (
-                                                    <CommandItem className="cursor-pointer hover:bg-zinc-200"
+                                                    <CommandItem className="cursor-pointer hover:bg-zinc-800 text-white"
                                                         key={sistemas.value}
                                                         onSelect={(currentValue) => {
                                                             setValue(currentValue === value ? "" : currentValue)

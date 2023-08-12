@@ -7,12 +7,12 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-  
+} from "@/components/ui/dropdown-menu"
+
 
 import {
     Dot
-  } from "lucide-react";
+} from "lucide-react";
 
 import { UserButton } from "@clerk/nextjs";
 import Image from 'next/image';
@@ -52,16 +52,16 @@ export default function Menubar() {
 
     const getDotColor = () => {
         switch (status) {
-          case "Online":
-            return "bg-emerald-500";
-          case "Ocupado":
-            return "bg-yellow-500";
-          case "Não-Pertubar":
-            return "bg-red-700";
-          default:
-            return "bg-emerald-500"; // Cor padrão, caso o status não corresponda a nenhum caso acima
+            case "Online":
+                return "bg-emerald-500";
+            case "Ocupado":
+                return "bg-yellow-500";
+            case "Não-Pertubar":
+                return "bg-red-700";
+            default:
+                return "bg-emerald-500"; // Cor padrão, caso o status não corresponda a nenhum caso acima
         }
-      };
+    };
 
     return (
         <>
@@ -87,24 +87,25 @@ export default function Menubar() {
                             <IoNotifications className='text-heading1-bold'></IoNotifications>
                         </span>
 
-                        <div className="z-10 relative top-[25rem] ">
-                            
+                        <div className="  relative top-[25rem] ">
+
                             <UserButton appearance={
                                 {
                                     elements: {
-                                        avatarBox  : "w-[3rem] h-[3rem]",
+                                        avatarBox: "w-[3rem] h-[3rem]",
                                     },
-                                    
+
                                 }
                             }
-                            afterSignOutUrl="/" />
-                            
+                                afterSignOutUrl="/" />
+                            <span className="z-20 relative top-[-1rem] left-7 px-2.5 py-0 rounded-full bg-green-500 w-4 h-4 cursor-pointer"></span>
+
                         </div>
-                        <Dot className="relative text-green-500 cursor-pointer" />
+
                     </nav>
-                    
+
                 </aside>
-                
+
             </main>
         </>
     )
