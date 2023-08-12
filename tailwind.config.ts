@@ -16,6 +16,13 @@ module.exports = {
       },
     },
     fontSize: {
+      "heading1-bold2": [
+        "60px",
+        {
+          lineHeight: "140%",
+          fontWeight: "700",
+        },
+      ],
       "heading1-bold": [
         "36px",
         {
